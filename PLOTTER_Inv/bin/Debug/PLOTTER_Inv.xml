@@ -1,0 +1,160 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PLOTTER_Inv
+</name>
+</assembly>
+<members>
+<member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Salida_DevolucionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Salida_EntregaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Factura_CompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Producto_CompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.ProductosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Salida_DevolucionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Salida_EntregaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Factura_CompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Producto_CompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.ProductosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Salida_DevolucionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Salida_EntregaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Factura_CompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.Producto_CompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet.ProductosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.Salida_DevolucionTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.Salida_EntregaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.Factura_CompraTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.Producto_CompraTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.ProductosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(PLOTTER_Inv.Revisado_II_PDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(PLOTTER_Inv.Revisado_II_PDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(PLOTTER_Inv.Revisado_II_PDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.UpdateAll(PLOTTER_Inv.Revisado_II_PDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:PLOTTER_Inv.Revisado_II_PDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources._02">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources._08">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources.Logo_Jr2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources.mdevice">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PLOTTER_Inv.My.Resources.Resources.TRANSPARENTE__1_">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="T:PLOTTER_Inv.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+</members>
+</doc>

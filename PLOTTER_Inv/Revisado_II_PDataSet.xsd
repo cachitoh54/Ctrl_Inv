@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Revisado_II_PDataSet" targetNamespace="http://tempuri.org/Revisado_II_PDataSet.xsd" xmlns:mstns="http://tempuri.org/Revisado_II_PDataSet.xsd" xmlns="http://tempuri.org/Revisado_II_PDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Revisado_II_PConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Revisado_II_PConnectionString (MySettings)" PropertyReference="ApplicationSettings.PLOTTER_Inv.My.MySettings.GlobalReference.Default.Revisado_II_PConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Salida_DevolucionTableAdapter" GeneratorDataComponentClassName="Salida_DevolucionTableAdapter" Name="Salida_Devolucion" UserDataComponentName="Salida_DevolucionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Revisado_II_PConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Salida_Devolucion.Nro_Orden, Salida_Devolucion.Cod_Productos, Salida_Devolucion.Cod_Empleado, Salida_Devolucion.Cantidad, Salida_Devolucion.Devolucion, 
+                         Salida_Devolucion.Descripcion, Salida_Entrega.Fecha, Salida_Entrega.Cedula, Salida_Entrega.Nombres
+FROM            (Salida_Devolucion INNER JOIN
+                         Salida_Entrega ON Salida_Devolucion.Nro_Orden = Salida_Entrega.Nro_Orden)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nro_Orden" DataSetColumn="Nro_Orden" />
+              <Mapping SourceColumn="Cod_Productos" DataSetColumn="Cod_Productos" />
+              <Mapping SourceColumn="Cod_Empleado" DataSetColumn="Cod_Empleado" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Devolucion" DataSetColumn="Devolucion" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="Nombres" DataSetColumn="Nombres" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Salida_EntregaTableAdapter" GeneratorDataComponentClassName="Salida_EntregaTableAdapter" Name="Salida_Entrega" UserDataComponentName="Salida_EntregaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Revisado_II_PConnectionString (MySettings)" DbObjectName="Salida_Entrega" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Salida_Entrega` WHERE ((`Nro_Orden` = ?) AND ((? = 1 AND `Cod_empleado` IS NULL) OR (`Cod_empleado` = ?)) AND ((? = 1 AND `Fecha` IS NULL) OR (`Fecha` = ?)) AND ((? = 1 AND `Cedula` IS NULL) OR (`Cedula` = ?)) AND ((? = 1 AND `Nombres` IS NULL) OR (`Nombres` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Nro_Orden" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Orden" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Cod_empleado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_empleado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Cod_empleado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_empleado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Fecha" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Cedula" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Cedula" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Nombres" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Nombres" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Estado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Salida_Entrega` (`Nro_Orden`, `Cod_empleado`, `Fecha`, `Cedula`, `Nombres`, `Estado`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Nro_Orden" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Orden" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Cod_empleado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_empleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Cedula" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Nombres" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nro_Orden, Cod_empleado, Fecha, Cedula, Nombres, Estado FROM Salida_Entrega</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Salida_Entrega` SET `Nro_Orden` = ?, `Cod_empleado` = ?, `Fecha` = ?, `Cedula` = ?, `Nombres` = ?, `Estado` = ? WHERE ((`Nro_Orden` = ?) AND ((? = 1 AND `Cod_empleado` IS NULL) OR (`Cod_empleado` = ?)) AND ((? = 1 AND `Fecha` IS NULL) OR (`Fecha` = ?)) AND ((? = 1 AND `Cedula` IS NULL) OR (`Cedula` = ?)) AND ((? = 1 AND `Nombres` IS NULL) OR (`Nombres` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Nro_Orden" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Orden" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Cod_empleado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_empleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Cedula" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Nombres" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Nro_Orden" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Orden" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Cod_empleado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_empleado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Cod_empleado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cod_empleado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Fecha" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Cedula" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Cedula" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cedula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Nombres" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Nombres" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Estado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nro_Orden" DataSetColumn="Nro_Orden" />
+              <Mapping SourceColumn="Cod_empleado" DataSetColumn="Cod_empleado" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="Nombres" DataSetColumn="Nombres" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Factura_CompraTableAdapter" GeneratorDataComponentClassName="Factura_CompraTableAdapter" Name="Factura_Compra" UserDataComponentName="Factura_CompraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Revisado_II_PConnectionString (MySettings)" DbObjectName="Factura_Compra" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Factura_Compra` WHERE ((`Nro_Factura` = ?) AND (`Cod_Proveedor` = ?) AND ((? = 1 AND `Fecha` IS NULL) OR (`Fecha` = ?)) AND ((? = 1 AND `Iva` IS NULL) OR (`Iva` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Nro_Factura" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Factura" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Cod_Proveedor" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Proveedor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Fecha" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Iva" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Iva" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="Original_Iva" Precision="0" ProviderType="Single" Scale="0" Size="0" SourceColumn="Iva" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Estado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Factura_Compra` (`Nro_Factura`, `Cod_Proveedor`, `Fecha`, `Iva`, `Estado`) VALUES (?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Nro_Factura" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Factura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Cod_Proveedor" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Proveedor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="Iva" Precision="0" ProviderType="Single" Scale="0" Size="0" SourceColumn="Iva" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nro_Factura, Cod_Proveedor, Fecha, Iva, Estado FROM Factura_Compra</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Factura_Compra` SET `Nro_Factura` = ?, `Cod_Proveedor` = ?, `Fecha` = ?, `Iva` = ?, `Estado` = ? WHERE ((`Nro_Factura` = ?) AND (`Cod_Proveedor` = ?) AND ((? = 1 AND `Fecha` IS NULL) OR (`Fecha` = ?)) AND ((? = 1 AND `Iva` IS NULL) OR (`Iva` = ?)) AND ((? = 1 AND `Estado` IS NULL) OR (`Estado` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Nro_Factura" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Factura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Cod_Proveedor" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Proveedor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="Iva" Precision="0" ProviderType="Single" Scale="0" Size="0" SourceColumn="Iva" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Nro_Factura" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Nro_Factura" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Cod_Proveedor" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Proveedor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Fecha" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Fecha" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Iva" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Iva" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="Original_Iva" Precision="0" ProviderType="Single" Scale="0" Size="0" SourceColumn="Iva" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Estado" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Estado" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nro_Factura" DataSetColumn="Nro_Factura" />
+              <Mapping SourceColumn="Cod_Proveedor" DataSetColumn="Cod_Proveedor" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Iva" DataSetColumn="Iva" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Producto_CompraTableAdapter" GeneratorDataComponentClassName="Producto_CompraTableAdapter" Name="Producto_Compra" UserDataComponentName="Producto_CompraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Revisado_II_PConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Producto_Compra.Nro_Factura, Producto_Compra.Cod_Proveedor, Producto_Compra.Cod_Productos, Producto_Compra.Precio_unidad, 
+                         Producto_Compra.Precio_empaque, Producto_Compra.Peso, Producto_Compra.Transporte, Producto_Compra.Cantidad, Factura_Compra.Fecha, 
+                         Factura_Compra.Iva
+FROM            (Producto_Compra INNER JOIN
+                         Factura_Compra ON Producto_Compra.Nro_Factura = Factura_Compra.Nro_Factura AND Producto_Compra.Cod_Proveedor = Factura_Compra.Cod_Proveedor)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nro_Factura" DataSetColumn="Nro_Factura" />
+              <Mapping SourceColumn="Cod_Proveedor" DataSetColumn="Cod_Proveedor" />
+              <Mapping SourceColumn="Cod_Productos" DataSetColumn="Cod_Productos" />
+              <Mapping SourceColumn="Precio_unidad" DataSetColumn="Precio_unidad" />
+              <Mapping SourceColumn="Precio_empaque" DataSetColumn="Precio_empaque" />
+              <Mapping SourceColumn="Peso" DataSetColumn="Peso" />
+              <Mapping SourceColumn="Transporte" DataSetColumn="Transporte" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Iva" DataSetColumn="Iva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductosTableAdapter" GeneratorDataComponentClassName="ProductosTableAdapter" Name="Productos" UserDataComponentName="ProductosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Revisado_II_PConnectionString (MySettings)" DbObjectName="Productos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Productos` WHERE ((`Cod_Productos` = ?) AND ((? = 1 AND `Descripcion` IS NULL) OR (`Descripcion` = ?)) AND ((? = 1 AND `Precio_unidad` IS NULL) OR (`Precio_unidad` = ?)) AND ((? = 1 AND `Precio_empaque` IS NULL) OR (`Precio_empaque` = ?)) AND ((? = 1 AND `Marca` IS NULL) OR (`Marca` = ?)) AND ((? = 1 AND `Existencia` IS NULL) OR (`Existencia` = ?)) AND ((? = 1 AND `Stock_Minimo` IS NULL) OR (`Stock_Minimo` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Cod_Productos" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Productos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Descripcion" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Descripcion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Descripcion" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Descripcion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Precio_unidad" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Precio_unidad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Precio_unidad" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_unidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Precio_empaque" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Precio_empaque" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Precio_empaque" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_empaque" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Marca" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Marca" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Marca" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Marca" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Existencia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Existencia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Existencia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Existencia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Stock_Minimo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Stock_Minimo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Stock_Minimo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Stock_Minimo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Productos` (`Cod_Productos`, `Descripcion`, `Precio_unidad`, `Precio_empaque`, `Marca`, `Existencia`, `Stock_Minimo`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Cod_Productos" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Productos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Descripcion" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Descripcion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Precio_unidad" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_unidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Precio_empaque" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_empaque" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Marca" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Marca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Existencia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Existencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Stock_Minimo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Stock_Minimo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Cod_Productos, Descripcion, Precio_unidad, Precio_empaque, Marca, Existencia, Stock_Minimo
+FROM            Productos
+ORDER BY Cod_Productos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Productos` SET `Cod_Productos` = ?, `Descripcion` = ?, `Precio_unidad` = ?, `Precio_empaque` = ?, `Marca` = ?, `Existencia` = ?, `Stock_Minimo` = ? WHERE ((`Cod_Productos` = ?) AND ((? = 1 AND `Descripcion` IS NULL) OR (`Descripcion` = ?)) AND ((? = 1 AND `Precio_unidad` IS NULL) OR (`Precio_unidad` = ?)) AND ((? = 1 AND `Precio_empaque` IS NULL) OR (`Precio_empaque` = ?)) AND ((? = 1 AND `Marca` IS NULL) OR (`Marca` = ?)) AND ((? = 1 AND `Existencia` IS NULL) OR (`Existencia` = ?)) AND ((? = 1 AND `Stock_Minimo` IS NULL) OR (`Stock_Minimo` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Cod_Productos" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Productos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Descripcion" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Descripcion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Precio_unidad" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_unidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Precio_empaque" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_empaque" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Marca" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Marca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Existencia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Existencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Stock_Minimo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Stock_Minimo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Cod_Productos" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Cod_Productos" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Descripcion" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Descripcion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Descripcion" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Descripcion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Precio_unidad" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Precio_unidad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Precio_unidad" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_unidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Precio_empaque" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Precio_empaque" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Precio_empaque" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Precio_empaque" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Marca" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Marca" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Marca" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Marca" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Existencia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Existencia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Existencia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Existencia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Stock_Minimo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Stock_Minimo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Stock_Minimo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Stock_Minimo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod_Productos" DataSetColumn="Cod_Productos" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Precio_unidad" DataSetColumn="Precio_unidad" />
+              <Mapping SourceColumn="Precio_empaque" DataSetColumn="Precio_empaque" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Existencia" DataSetColumn="Existencia" />
+              <Mapping SourceColumn="Stock_Minimo" DataSetColumn="Stock_Minimo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Revisado_II_PDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Revisado_II_PDataSet" msprop:Generator_UserDSName="Revisado_II_PDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Salida_Devolucion" msprop:Generator_TableClassName="Salida_DevolucionDataTable" msprop:Generator_TableVarName="tableSalida_Devolucion" msprop:Generator_RowChangedName="Salida_DevolucionRowChanged" msprop:Generator_TablePropName="Salida_Devolucion" msprop:Generator_RowDeletingName="Salida_DevolucionRowDeleting" msprop:Generator_RowChangingName="Salida_DevolucionRowChanging" msprop:Generator_RowEvHandlerName="Salida_DevolucionRowChangeEventHandler" msprop:Generator_RowDeletedName="Salida_DevolucionRowDeleted" msprop:Generator_RowClassName="Salida_DevolucionRow" msprop:Generator_UserTableName="Salida_Devolucion" msprop:Generator_RowEvArgName="Salida_DevolucionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nro_Orden" msprop:Generator_ColumnVarNameInTable="columnNro_Orden" msprop:Generator_ColumnPropNameInRow="Nro_Orden" msprop:Generator_ColumnPropNameInTable="Nro_OrdenColumn" msprop:Generator_UserColumnName="Nro_Orden" type="xs:int" minOccurs="0" />
+              <xs:element name="Cod_Productos" msprop:Generator_ColumnVarNameInTable="columnCod_Productos" msprop:Generator_ColumnPropNameInRow="Cod_Productos" msprop:Generator_ColumnPropNameInTable="Cod_ProductosColumn" msprop:Generator_UserColumnName="Cod_Productos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cod_Empleado" msprop:Generator_ColumnVarNameInTable="columnCod_Empleado" msprop:Generator_ColumnPropNameInRow="Cod_Empleado" msprop:Generator_ColumnPropNameInTable="Cod_EmpleadoColumn" msprop:Generator_UserColumnName="Cod_Empleado" type="xs:int" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="Devolucion" msprop:Generator_ColumnVarNameInTable="columnDevolucion" msprop:Generator_ColumnPropNameInRow="Devolucion" msprop:Generator_ColumnPropNameInTable="DevolucionColumn" msprop:Generator_UserColumnName="Devolucion" type="xs:int" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Salida_Entrega" msprop:Generator_TableClassName="Salida_EntregaDataTable" msprop:Generator_TableVarName="tableSalida_Entrega" msprop:Generator_RowChangedName="Salida_EntregaRowChanged" msprop:Generator_TablePropName="Salida_Entrega" msprop:Generator_RowDeletingName="Salida_EntregaRowDeleting" msprop:Generator_RowChangingName="Salida_EntregaRowChanging" msprop:Generator_RowEvHandlerName="Salida_EntregaRowChangeEventHandler" msprop:Generator_RowDeletedName="Salida_EntregaRowDeleted" msprop:Generator_RowClassName="Salida_EntregaRow" msprop:Generator_UserTableName="Salida_Entrega" msprop:Generator_RowEvArgName="Salida_EntregaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nro_Orden" msprop:Generator_ColumnVarNameInTable="columnNro_Orden" msprop:Generator_ColumnPropNameInRow="Nro_Orden" msprop:Generator_ColumnPropNameInTable="Nro_OrdenColumn" msprop:Generator_UserColumnName="Nro_Orden" type="xs:int" />
+              <xs:element name="Cod_empleado" msprop:Generator_ColumnVarNameInTable="columnCod_empleado" msprop:Generator_ColumnPropNameInRow="Cod_empleado" msprop:Generator_ColumnPropNameInTable="Cod_empleadoColumn" msprop:Generator_UserColumnName="Cod_empleado" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Factura_Compra" msprop:Generator_TableClassName="Factura_CompraDataTable" msprop:Generator_TableVarName="tableFactura_Compra" msprop:Generator_TablePropName="Factura_Compra" msprop:Generator_RowDeletingName="Factura_CompraRowDeleting" msprop:Generator_RowChangingName="Factura_CompraRowChanging" msprop:Generator_RowEvHandlerName="Factura_CompraRowChangeEventHandler" msprop:Generator_RowDeletedName="Factura_CompraRowDeleted" msprop:Generator_UserTableName="Factura_Compra" msprop:Generator_RowChangedName="Factura_CompraRowChanged" msprop:Generator_RowEvArgName="Factura_CompraRowChangeEvent" msprop:Generator_RowClassName="Factura_CompraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nro_Factura" msprop:Generator_ColumnVarNameInTable="columnNro_Factura" msprop:Generator_ColumnPropNameInRow="Nro_Factura" msprop:Generator_ColumnPropNameInTable="Nro_FacturaColumn" msprop:Generator_UserColumnName="Nro_Factura" type="xs:int" />
+              <xs:element name="Cod_Proveedor" msprop:Generator_ColumnVarNameInTable="columnCod_Proveedor" msprop:Generator_ColumnPropNameInRow="Cod_Proveedor" msprop:Generator_ColumnPropNameInTable="Cod_ProveedorColumn" msprop:Generator_UserColumnName="Cod_Proveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Iva" msprop:Generator_ColumnVarNameInTable="columnIva" msprop:Generator_ColumnPropNameInRow="Iva" msprop:Generator_ColumnPropNameInTable="IvaColumn" msprop:Generator_UserColumnName="Iva" type="xs:float" minOccurs="0" />
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Producto_Compra" msprop:Generator_TableClassName="Producto_CompraDataTable" msprop:Generator_TableVarName="tableProducto_Compra" msprop:Generator_TablePropName="Producto_Compra" msprop:Generator_RowDeletingName="Producto_CompraRowDeleting" msprop:Generator_RowChangingName="Producto_CompraRowChanging" msprop:Generator_RowEvHandlerName="Producto_CompraRowChangeEventHandler" msprop:Generator_RowDeletedName="Producto_CompraRowDeleted" msprop:Generator_UserTableName="Producto_Compra" msprop:Generator_RowChangedName="Producto_CompraRowChanged" msprop:Generator_RowEvArgName="Producto_CompraRowChangeEvent" msprop:Generator_RowClassName="Producto_CompraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nro_Factura" msprop:Generator_ColumnVarNameInTable="columnNro_Factura" msprop:Generator_ColumnPropNameInRow="Nro_Factura" msprop:Generator_ColumnPropNameInTable="Nro_FacturaColumn" msprop:Generator_UserColumnName="Nro_Factura" type="xs:int" minOccurs="0" />
+              <xs:element name="Cod_Proveedor" msprop:Generator_ColumnVarNameInTable="columnCod_Proveedor" msprop:Generator_ColumnPropNameInRow="Cod_Proveedor" msprop:Generator_ColumnPropNameInTable="Cod_ProveedorColumn" msprop:Generator_UserColumnName="Cod_Proveedor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cod_Productos" msprop:Generator_ColumnVarNameInTable="columnCod_Productos" msprop:Generator_ColumnPropNameInRow="Cod_Productos" msprop:Generator_ColumnPropNameInTable="Cod_ProductosColumn" msprop:Generator_UserColumnName="Cod_Productos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio_unidad" msprop:Generator_ColumnVarNameInTable="columnPrecio_unidad" msprop:Generator_ColumnPropNameInRow="Precio_unidad" msprop:Generator_ColumnPropNameInTable="Precio_unidadColumn" msprop:Generator_UserColumnName="Precio_unidad" type="xs:double" minOccurs="0" />
+              <xs:element name="Precio_empaque" msprop:Generator_ColumnVarNameInTable="columnPrecio_empaque" msprop:Generator_ColumnPropNameInRow="Precio_empaque" msprop:Generator_ColumnPropNameInTable="Precio_empaqueColumn" msprop:Generator_UserColumnName="Precio_empaque" type="xs:double" minOccurs="0" />
+              <xs:element name="Peso" msprop:Generator_ColumnVarNameInTable="columnPeso" msprop:Generator_ColumnPropNameInRow="Peso" msprop:Generator_ColumnPropNameInTable="PesoColumn" msprop:Generator_UserColumnName="Peso" type="xs:double" minOccurs="0" />
+              <xs:element name="Transporte" msprop:Generator_ColumnVarNameInTable="columnTransporte" msprop:Generator_ColumnPropNameInRow="Transporte" msprop:Generator_ColumnPropNameInTable="TransporteColumn" msprop:Generator_UserColumnName="Transporte" type="xs:double" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Iva" msprop:Generator_ColumnVarNameInTable="columnIva" msprop:Generator_ColumnPropNameInRow="Iva" msprop:Generator_ColumnPropNameInTable="IvaColumn" msprop:Generator_UserColumnName="Iva" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Productos" msprop:Generator_TableClassName="ProductosDataTable" msprop:Generator_TableVarName="tableProductos" msprop:Generator_TablePropName="Productos" msprop:Generator_RowDeletingName="ProductosRowDeleting" msprop:Generator_RowChangingName="ProductosRowChanging" msprop:Generator_RowEvHandlerName="ProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosRowDeleted" msprop:Generator_UserTableName="Productos" msprop:Generator_RowChangedName="ProductosRowChanged" msprop:Generator_RowEvArgName="ProductosRowChangeEvent" msprop:Generator_RowClassName="ProductosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Productos" msprop:Generator_ColumnVarNameInTable="columnCod_Productos" msprop:Generator_ColumnPropNameInRow="Cod_Productos" msprop:Generator_ColumnPropNameInTable="Cod_ProductosColumn" msprop:Generator_UserColumnName="Cod_Productos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio_unidad" msprop:Generator_ColumnVarNameInTable="columnPrecio_unidad" msprop:Generator_ColumnPropNameInRow="Precio_unidad" msprop:Generator_ColumnPropNameInTable="Precio_unidadColumn" msprop:Generator_UserColumnName="Precio_unidad" type="xs:double" minOccurs="0" />
+              <xs:element name="Precio_empaque" msprop:Generator_ColumnVarNameInTable="columnPrecio_empaque" msprop:Generator_ColumnPropNameInRow="Precio_empaque" msprop:Generator_ColumnPropNameInTable="Precio_empaqueColumn" msprop:Generator_UserColumnName="Precio_empaque" type="xs:double" minOccurs="0" />
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Existencia" msprop:Generator_ColumnVarNameInTable="columnExistencia" msprop:Generator_ColumnPropNameInRow="Existencia" msprop:Generator_ColumnPropNameInTable="ExistenciaColumn" msprop:Generator_UserColumnName="Existencia" type="xs:int" minOccurs="0" />
+              <xs:element name="Stock_Minimo" msprop:Generator_ColumnVarNameInTable="columnStock_Minimo" msprop:Generator_ColumnPropNameInRow="Stock_Minimo" msprop:Generator_ColumnPropNameInTable="Stock_MinimoColumn" msprop:Generator_UserColumnName="Stock_Minimo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Salida_Devolucion" />
+      <xs:field xpath="mstns:Nro_Orden" />
+      <xs:field xpath="mstns:Cod_Productos" />
+    </xs:unique>
+    <xs:unique name="Salida_Entrega_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Salida_Entrega" />
+      <xs:field xpath="mstns:Nro_Orden" />
+    </xs:unique>
+    <xs:unique name="Factura_Compra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Factura_Compra" />
+      <xs:field xpath="mstns:Nro_Factura" />
+      <xs:field xpath="mstns:Cod_Proveedor" />
+    </xs:unique>
+    <xs:unique name="Producto_Compra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Producto_Compra" />
+      <xs:field xpath="mstns:Nro_Factura" />
+      <xs:field xpath="mstns:Cod_Proveedor" />
+      <xs:field xpath="mstns:Cod_Productos" />
+    </xs:unique>
+    <xs:unique name="Productos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Productos" />
+      <xs:field xpath="mstns:Cod_Productos" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Salida_EntregaSalida_Devolucion" msdata:parent="Salida_Entrega" msdata:child="Salida_Devolucion" msdata:parentkey="Nro_Orden" msdata:childkey="Nro_Orden" msprop:Generator_UserChildTable="Salida_Devolucion" msprop:Generator_ChildPropName="GetSalida_DevolucionRows" msprop:Generator_UserRelationName="Salida_EntregaSalida_Devolucion" msprop:Generator_ParentPropName="Salida_EntregaRow" msprop:Generator_RelationVarName="relationSalida_EntregaSalida_Devolucion" msprop:Generator_UserParentTable="Salida_Entrega" />
+      <msdata:Relationship name="Factura_CompraProducto_Compra" msdata:parent="Factura_Compra" msdata:child="Producto_Compra" msdata:parentkey="Nro_Factura Cod_Proveedor" msdata:childkey="Nro_Factura Cod_Proveedor" msprop:Generator_UserChildTable="Producto_Compra" msprop:Generator_ChildPropName="GetProducto_CompraRows" msprop:Generator_UserRelationName="Factura_CompraProducto_Compra" msprop:Generator_ParentPropName="Factura_CompraRowParent" msprop:Generator_RelationVarName="relationFactura_CompraProducto_Compra" msprop:Generator_UserParentTable="Factura_Compra" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
